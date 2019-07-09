@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.pyh.stock.Dao.StockDetailMapper">
+  <resultMap id="BaseResultMap" type="com.pyh.stock.Entry.StockDetail">
+    <id column="save_id" jdbcType="INTEGER" property="save_id" />
+    <result column="stock_num" jdbcType="VARCHAR" property="stock_num" />
+    <result column="open" jdbcType="VARCHAR" property="open" />
+    <result column="close" jdbcType="VARCHAR" property="close" />
+    <result column="high" jdbcType="VARCHAR" property="high" />
+    <result column="low" jdbcType="VARCHAR" property="low" />
+    <result column="volume" jdbcType="VARCHAR" property="volume" />
+    <result column="up_time" jdbcType="VARCHAR" property="up_time" />
+  </resultMap>
+
+  <sql id="Base_Column_List">
+    save_id, stock_num, `open`, `close`, `high`, `low`, `volume`, up_time
+  </sql>
+
+  <insert id="insertListData" parameterType="java.util.List">
+    insert into stock_detail (stock_num, `open`, `close`, `high`, `low`, `volume`, up_time)
+    values
+      <foreach collection="list" item="item" index="index" separator=",">
+          (#{item.stock_num},#{item.open},#{item.close},#{item.high},#{item.low},#{item.volume},#{item.up_time})
+      </foreach>
+  </insert>
+</mapper>

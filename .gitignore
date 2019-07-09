@@ -1,0 +1,55 @@
+.idea
+stocks-web/.DS_Store
+stocks-web/node_modules
+stocks-web/dist
+
+# local env files
+stocks-web/.env.local
+stocks-web/.env.*.local
+
+# Log files
+stocks-web/npm-debug.log*
+stocks-web/yarn-debug.log*
+stocks-web/yarn-error.log*
+
+# Editor directories and files
+stocks-web/.idea
+stocks-web/.vscode
+stocks-web/*.suo
+stocks-web/*.ntvs*
+stocks-web/*.njsproj
+stocks-web/*.sln
+stocks-web/*.sw?
+
+stock/HELP.md
+stock/target/
+stock/!.mvn/wrapper/maven-wrapper.jar
+stock/!**/src/main/**
+stock/!**/src/test/**
+
+### STS ###
+stock/.apt_generated
+stock/.classpath
+stock/.factorypath
+stock/.project
+stock/.settings
+stock/.springBeans
+stock/.sts4-cache
+stock/src/main/resources/static/DB/stockDB(contain data).sql
+
+### IntelliJ IDEA ###
+stock/.idea
+stock/*.iws
+stock/*.iml
+stock/*.ipr
+
+### NetBeans ###
+stock/nbproject/private/
+stock/nbbuild/
+stock/dist/
+stock/nbdist/
+stock/.nb-gradle/
+stock/build/
+
+### VS Code ###
+stock/.vscode/
